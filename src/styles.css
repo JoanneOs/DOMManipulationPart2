@@ -1,30 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Menu</title>
-    <!-- Link to the CSS file in the src folder -->
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
-  <body>
-    <!-- Top Menu -->
-    <nav id="top-menu">
-      <a href="#" data-link="about">About</a>
-      <a href="#" data-link="catalog">Catalog</a>
-      <a href="#" data-link="orders">Orders</a>
-      <a href="#" data-link="account">Account</a>
-    </nav>
-
-    <!-- Sub Menu -->
-    <nav id="sub-menu"></nav>
-
-    <!-- Main Content -->
-    <main id="main-content">
-      <h1>Welcome</h1>
-    </main>
-
-    <!-- Link to the JS file in the src folder -->
-    <script src="src/index.js"></script>
-  </body>
-</html>
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Top menu styles */
+  #top-menu {
+    background-color: #333;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  
+  #top-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  #top-menu a.active {
+    background-color: #666;
+  }
+  
+  /* Submenu styles */
+  #sub-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+  }
+  
+  #sub-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+  
+  /* Main content styles */
+  #main-content {
+    padding: 2rem;
+  }
+  
